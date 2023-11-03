@@ -1,0 +1,54 @@
+{
+  "name": "@ascen/zero",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "blank",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "exports": "./build/index.js",
+  "files": [
+    "./build",
+    "./LICENSE"
+  ],
+  "scripts": {
+    "test": "npm run build && node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anascen/zero.git"
+  },
+  "keywords": [],
+  "author": "ascen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anascen/zero/issues"
+  },
+  "homepage": "https://github.com/anascen/zero#readme",
+  "devDependencies": {
+    "@ascen/corus-tsconfig": "^1.2.1",
+    "@types/node": "^20.8.10",
+    "del-cli": "^5.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "prettier": "^3.0.3",
+    "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "network-address": "^1.1.2",
+    "power-off": "^1.1.2",
+    "sleep-mode": "^1.1.0",
+    "update-notifier": "^7.0.0"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "**/**/*": "prettier --write --ignore-unknown",
+    "**/**/**/*": "prettier --write --ignore-unknown",
+    "**/**/**/**/*": "prettier --write --ignore-unknown",
+    "**/**/**/**/**/*": "prettier --write --ignore-unknown"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
